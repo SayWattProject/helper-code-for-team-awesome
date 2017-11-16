@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Webpage</title>
+</head>
+<body>
+    <ul id="navigation">
+    {% for item in data %}
+        <li>{{ item }} {{ item.lat }} {{ item.lon }}</li>
+    {% endfor %}
+    </ul>
+
+    <h1>My Webpage</h1>
+
+    <table>
+      <TH>Lat</TH>
+      <TH>Lon</TH>
+    {% for item in data %}
+    <TR>
+       <TD class="lat">{{item.lat}}</TD>
+       <TD class="lon">{{item.lon}}</TD>
+
+    </TR>
+    {% endfor %}
+    </table>
+
+</body>
+</html>
